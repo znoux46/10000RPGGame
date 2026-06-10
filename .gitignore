@@ -1,0 +1,173 @@
+# ==========================================
+# 10000RPG GitIgnore
+# ==========================================
+
+# ------------------------------------------
+# .NET / C# Build Output
+# ------------------------------------------
+[bB]in/
+[oO]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+publish/
+bld/
+[Bb]in/[Rr]elease/
+[Oo]bj/[Rr]elease/
+*.dll
+*.exe
+*.pdb
+*.exe.config
+*.xml
+*.config
+*.manifest
+*.mdb
+*.cache
+*.psess
+*.vsp
+*.vspx
+
+# NuGet-packages directory
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# ------------------------------------------
+# NuGet
+# ------------------------------------------
+*.nuget.props
+*.nuget.targets
+project.nuget.cache
+
+# ------------------------------------------
+# Visual Studio / IDE
+# ------------------------------------------
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+*.ncb
+*.opal
+*.sln.docstates
+.DS_Store
+Thumbs.db
+*.qpt
+*.vcxitems
+*.vspscc
+*.vssscc
+*.psm
+
+# ReSharper
+_ReSharper*/
+*.ReSharper.user
+*.ReSharper.State
+
+# Visual Studio memory dump
+*.mdmp
+*.hdmp
+
+# ------------------------------------------
+# User-specific files
+# ------------------------------------------
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# ------------------------------------------
+# Node.js / Next.js / Frontend
+# ------------------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp
+.pnp.js
+.pnp.loader.mjs
+
+# Testing
+coverage/
+*.coverage
+*.coverage.xml
+
+# Production
+.next/
+out/
+.build/
+dist/
+server/
+.turbo/
+.rollup.cache
+
+# Misc
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+.env
+!.env.example
+!.env.development
+!.env.production
+
+# ------------------------------------------
+# Logs
+# ------------------------------------------
+*.log
+logs/
+*.log.*
+
+# ------------------------------------------
+# Runtime data
+# ------------------------------------------
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# ------------------------------------------
+# Editor and Random
+# ------------------------------------------
+*~
+*.swp
+*.swo
+*~
+.idea/
+*.iml
+.vs/
+*.code-workspace
+
+# ------------------------------------------
+# EF Core Migrations (optional - can be committed if needed)
+# ------------------------------------------
+# [Mm]igrations/
+# !*[Mm]igrations/
+# !*[Mm]igrations/*.cs
+# !*[Mm]igrations/*.Designer.cs
+
+# ------------------------------------------
+# Secrets (do NOT commit)
+# ------------------------------------------
+appsettings.json
+!appsettings.Development.json
+*.key
+*.pfx
+*.cer
+*.pub
+*.sig
