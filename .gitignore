@@ -1,21 +1,26 @@
 # ==========================================
-# 10000RPG GitIgnore
+# 10000RPG GitIgnore (Combined & Cleaned)
 # ==========================================
 
 # ------------------------------------------
-# .NET / C# Build Output
+# .NET / C# Build Output & Tooling
 # ------------------------------------------
-[bB]in/
-[oO]bj/
 [Dd]ebug/
+[Dd]ebugPublic/
 [Rr]elease/
+[Rr]eleases/
 x64/
 x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
 build/
 publish/
-bld/
-[Bb]in/[Rr]elease/
-[Oo]bj/[Rr]elease/
 *.dll
 *.exe
 *.pdb
@@ -28,26 +33,30 @@ bld/
 *.psess
 *.vsp
 *.vspx
-
-# NuGet-packages directory
-packages/
-*.nupkg
 project.lock.json
 project.fragment.lock.json
 artifacts/
 
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# MSBuild Binary and Structured Log
+*.binlog
+
 # ------------------------------------------
-# NuGet
+# NuGet Packages
 # ------------------------------------------
+packages/
+*.nupkg
+*.snupkg
 *.nuget.props
 *.nuget.targets
 project.nuget.cache
 
 # ------------------------------------------
-# Visual Studio / IDE
+# Visual Studio / IDE / Editors
 # ------------------------------------------
 .vs/
-.vscode/
 *.user
 *.suo
 *.userosscache
@@ -55,7 +64,6 @@ project.nuget.cache
 *.rsuser
 *.ncb
 *.opal
-*.sln.docstates
 .DS_Store
 Thumbs.db
 *.qpt
@@ -63,6 +71,8 @@ Thumbs.db
 *.vspscc
 *.vssscc
 *.psm
+.idea/
+*.iml
 
 # ReSharper
 _ReSharper*/
@@ -72,15 +82,6 @@ _ReSharper*/
 # Visual Studio memory dump
 *.mdmp
 *.hdmp
-
-# ------------------------------------------
-# User-specific files
-# ------------------------------------------
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-*.rsuser
 
 # Visual Studio Code
 .vscode/*
@@ -101,12 +102,7 @@ yarn-error.log*
 .pnp.js
 .pnp.loader.mjs
 
-# Testing
-coverage/
-*.coverage
-*.coverage.xml
-
-# Production
+# Production output
 .next/
 out/
 .build/
@@ -115,59 +111,50 @@ server/
 .turbo/
 .rollup.cache
 
-# Misc
-.DS_Store
-*.pem
+# ------------------------------------------
+# Testing & Code Coverage
+# ------------------------------------------
+coverage/
+*.coverage
+*.coverage.xml
+CodeCoverage/
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
 
-# local env files
-.env*.local
+# ------------------------------------------
+# Environment Files & Secrets (Crucial)
+# ------------------------------------------
 .env
+.env*.local
 !.env.example
 !.env.development
 !.env.production
-
-# ------------------------------------------
-# Logs
-# ------------------------------------------
-*.log
-logs/
-*.log.*
-
-# ------------------------------------------
-# Runtime data
-# ------------------------------------------
-pids/
-*.pid
-*.seed
-*.pid.lock
-
-# ------------------------------------------
-# Editor and Random
-# ------------------------------------------
-*~
-*.swp
-*.swo
-*~
-.idea/
-*.iml
-.vs/
-*.code-workspace
-
-# ------------------------------------------
-# EF Core Migrations (optional - can be committed if needed)
-# ------------------------------------------
-# [Mm]igrations/
-# !*[Mm]igrations/
-# !*[Mm]igrations/*.cs
-# !*[Mm]igrations/*.Designer.cs
-
-# ------------------------------------------
-# Secrets (do NOT commit)
-# ------------------------------------------
-appsettings.json
-!appsettings.Development.json
 *.key
 *.pfx
 *.cer
 *.pub
 *.sig
+*.pem
+
+# Cho phép commit appsettings.Development để chạy local, bảo mật appsettings gốc nếu cần
+# (Tùy chỉnh dựa theo cấu trúc dự án của bạn)
+# appsettings.json
+# !appsettings.Development.json
+
+# ------------------------------------------
+# System & Logs Runtime
+# ------------------------------------------
+*.log
+logs/
+*.log.*
+pids/
+*.pid
+*.seed
+*.pid.lock
+~$*
+*~
+*.swp
+*.swo
